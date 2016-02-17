@@ -10,10 +10,10 @@ use App\Http\Controllers\Controller;
 class SearchEngineController extends Controller
 {
     public function home() {
-        return response(view('home'), 200);
+        return response()->view('home');
     }
 
-    public function postForm() {
-
+    public function postForm(Request $request) {
+        return response()->view('home', ["response" => $request->input('query')]);
     }
 }

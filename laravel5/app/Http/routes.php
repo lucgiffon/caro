@@ -11,9 +11,5 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Route::get('/', 'SearchEngineController@home');
 Route::post('/', 'SearchEngineController@postForm');

@@ -17,8 +17,14 @@ class CreateProfesseurAnnaleTable extends Migration
             $table->integer('annale_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('professeur_id')->references('id')->on('professeurs');
-            $table->foreign('annale_id')->references('id')->on('annales');
+            $table->foreign('professeur_id')
+                ->references('id')->on('professeurs')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+            $table->foreign('annale_id')
+                ->references('id')->on('annales')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 
