@@ -1,0 +1,118 @@
+[2016-02-17 03:38:49,053][INFO ][node                     ] [Jack of Hearts] version[2.2.0], pid[14437], build[8ff36d1/2016-01-27T13:32:39Z]
+[2016-02-17 03:38:49,054][INFO ][node                     ] [Jack of Hearts] initializing ...
+[2016-02-17 03:38:50,488][INFO ][plugins                  ] [Jack of Hearts] modules [lang-groovy, lang-expression], plugins [], sites []
+[2016-02-17 03:38:50,635][INFO ][env                      ] [Jack of Hearts] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [259.2gb], net total_space [289.4gb], spins? [possibly], types [ext4]
+[2016-02-17 03:38:50,635][INFO ][env                      ] [Jack of Hearts] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-02-17 03:38:54,423][INFO ][node                     ] [Jack of Hearts] initialized
+[2016-02-17 03:38:54,424][INFO ][node                     ] [Jack of Hearts] starting ...
+[2016-02-17 03:38:54,586][INFO ][transport                ] [Jack of Hearts] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-02-17 03:38:54,601][INFO ][discovery                ] [Jack of Hearts] elasticsearch/tf2aytbLSQK8z-PeAMmSKg
+[2016-02-17 03:38:57,665][INFO ][cluster.service          ] [Jack of Hearts] new_master {Jack of Hearts}{tf2aytbLSQK8z-PeAMmSKg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-02-17 03:38:57,748][INFO ][http                     ] [Jack of Hearts] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-02-17 03:38:57,748][INFO ][node                     ] [Jack of Hearts] started
+[2016-02-17 03:38:57,868][INFO ][gateway                  ] [Jack of Hearts] recovered [0] indices into cluster_state
+[2016-02-17 03:39:21,061][INFO ][node                     ] [Jack of Hearts] stopping ...
+[2016-02-17 03:39:21,083][INFO ][node                     ] [Jack of Hearts] stopped
+[2016-02-17 03:39:21,083][INFO ][node                     ] [Jack of Hearts] closing ...
+[2016-02-17 03:39:21,096][INFO ][node                     ] [Jack of Hearts] closed
+[2016-02-17 03:39:30,638][INFO ][node                     ] [Groundhog] version[2.2.0], pid[14545], build[8ff36d1/2016-01-27T13:32:39Z]
+[2016-02-17 03:39:30,638][INFO ][node                     ] [Groundhog] initializing ...
+[2016-02-17 03:39:31,384][INFO ][plugins                  ] [Groundhog] modules [lang-groovy, lang-expression], plugins [], sites []
+[2016-02-17 03:39:31,423][INFO ][env                      ] [Groundhog] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [259.2gb], net total_space [289.4gb], spins? [possibly], types [ext4]
+[2016-02-17 03:39:31,424][INFO ][env                      ] [Groundhog] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-02-17 03:39:34,253][INFO ][node                     ] [Groundhog] initialized
+[2016-02-17 03:39:34,253][INFO ][node                     ] [Groundhog] starting ...
+[2016-02-17 03:39:34,383][INFO ][transport                ] [Groundhog] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-02-17 03:39:34,399][INFO ][discovery                ] [Groundhog] elasticsearch/9o95UL8lR6KbabtZ97W62w
+[2016-02-17 03:39:37,455][INFO ][cluster.service          ] [Groundhog] new_master {Groundhog}{9o95UL8lR6KbabtZ97W62w}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-02-17 03:39:37,471][INFO ][http                     ] [Groundhog] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-02-17 03:39:37,472][INFO ][node                     ] [Groundhog] started
+[2016-02-17 03:39:37,673][INFO ][gateway                  ] [Groundhog] recovered [0] indices into cluster_state
+[2016-02-17 03:39:44,816][INFO ][rest.suppressed          ] /default/default/1 Params: {id=1, index=default, type=default}
+[default] IndexNotFoundException[no such index]
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver.concreteIndices(IndexNameExpressionResolver.java:151)
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver.concreteIndices(IndexNameExpressionResolver.java:95)
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver.concreteSingleIndex(IndexNameExpressionResolver.java:208)
+	at org.elasticsearch.action.support.single.shard.TransportSingleShardAction$AsyncSingleAction.<init>(TransportSingleShardAction.java:138)
+	at org.elasticsearch.action.support.single.shard.TransportSingleShardAction$AsyncSingleAction.<init>(TransportSingleShardAction.java:115)
+	at org.elasticsearch.action.support.single.shard.TransportSingleShardAction.doExecute(TransportSingleShardAction.java:87)
+	at org.elasticsearch.action.support.single.shard.TransportSingleShardAction.doExecute(TransportSingleShardAction.java:51)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:70)
+	at org.elasticsearch.client.node.NodeClient.doExecute(NodeClient.java:58)
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:351)
+	at org.elasticsearch.client.FilterClient.doExecute(FilterClient.java:52)
+	at org.elasticsearch.rest.BaseRestHandler$HeadersAndContextCopyClient.doExecute(BaseRestHandler.java:83)
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:351)
+	at org.elasticsearch.client.support.AbstractClient.get(AbstractClient.java:443)
+	at org.elasticsearch.rest.action.get.RestGetAction.handleRequest(RestGetAction.java:74)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:207)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:363)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:63)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-02-17 03:39:45,290][INFO ][cluster.metadata         ] [Groundhog] [default] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [default]
+[2016-02-17 03:39:46,773][INFO ][cluster.routing.allocation] [Groundhog] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[default][4], [default][4]] ...]).
+[2016-02-17 03:39:46,903][INFO ][cluster.metadata         ] [Groundhog] [default] update_mapping [default]
+[2016-02-17 03:46:28,695][INFO ][cluster.metadata         ] [Groundhog] [twitter] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [user]
+[2016-02-17 03:46:29,840][INFO ][cluster.routing.allocation] [Groundhog] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[twitter][4]] ...]).
+[2016-02-17 03:46:29,933][INFO ][cluster.metadata         ] [Groundhog] [twitter] update_mapping [user]
+[2016-02-17 03:46:30,182][INFO ][cluster.metadata         ] [Groundhog] [twitter] create_mapping [tweet]
+[2016-02-17 03:49:15,680][INFO ][node                     ] [Groundhog] stopping ...
+[2016-02-17 03:49:16,916][INFO ][node                     ] [Groundhog] stopped
+[2016-02-17 03:49:16,917][INFO ][node                     ] [Groundhog] closing ...
+[2016-02-17 03:49:16,929][INFO ][node                     ] [Groundhog] closed
+[2016-02-17 03:49:19,764][INFO ][node                     ] [Tattletale] version[2.2.0], pid[14905], build[8ff36d1/2016-01-27T13:32:39Z]
+[2016-02-17 03:49:19,765][INFO ][node                     ] [Tattletale] initializing ...
+[2016-02-17 03:49:20,471][INFO ][plugins                  ] [Tattletale] modules [lang-groovy, lang-expression], plugins [], sites []
+[2016-02-17 03:49:20,506][INFO ][env                      ] [Tattletale] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [259.2gb], net total_space [289.4gb], spins? [possibly], types [ext4]
+[2016-02-17 03:49:20,506][INFO ][env                      ] [Tattletale] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-02-17 03:49:23,164][INFO ][node                     ] [Tattletale] initialized
+[2016-02-17 03:49:23,164][INFO ][node                     ] [Tattletale] starting ...
+[2016-02-17 03:49:23,259][INFO ][transport                ] [Tattletale] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-02-17 03:49:23,275][INFO ][discovery                ] [Tattletale] elasticsearch/oa2bSN_ERxOpV2PH2OIv1w
+[2016-02-17 03:49:26,332][INFO ][cluster.service          ] [Tattletale] new_master {Tattletale}{oa2bSN_ERxOpV2PH2OIv1w}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-02-17 03:49:26,385][INFO ][http                     ] [Tattletale] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-02-17 03:49:26,390][INFO ][node                     ] [Tattletale] started
+[2016-02-17 03:49:26,946][INFO ][gateway                  ] [Tattletale] recovered [2] indices into cluster_state
+[2016-02-17 03:49:29,101][INFO ][cluster.routing.allocation] [Tattletale] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[default][0], [default][3], [default][1], [default][3], [default][0]] ...]).
+[2016-02-17 04:02:47,649][INFO ][cluster.metadata         ] [Tattletale] [default] create_mapping [user]
+[2016-02-17 04:10:09,856][INFO ][cluster.metadata         ] [Tattletale] [default] update_mapping [default]
