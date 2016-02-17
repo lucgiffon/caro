@@ -20,8 +20,10 @@ class DatabaseSeeder extends Seeder
         $this->call("CursusTableSeeder");
         $this->call("AnnalesTableSeeder");
         $this->call("ProfesseursTableSeeder");
-        $this->call("AnnalesFichiersTableSeeder");
-        $this->call("ProfesseursAnnalesTableSeeder");
-        $this->call("TagsAnnalesTableSeeder");
+        $this->call("AnnaleFichierTableSeeder");
+        $this->call("AnnaleProfesseurTableSeeder");
+        $this->call("AnnaleTagTableSeeder");
+        $this->call("AnnaleFaculteTableSeeder");
+
     }
 }

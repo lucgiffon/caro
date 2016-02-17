@@ -14,10 +14,9 @@ class CreateAnnalesTable extends Migration
     {
         Schema::create('annales', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_matiere');
-            $table->integer('id_faculte');
-            $table->integer('id_niveau');
-            $table->integer('id_cursus');
+            $table->integer('matiere_id');
+            $table->integer('niveau_id');
+            $table->integer('cursus_id');
             $table->date('annee');
             $table->string('path');
             $table->timestamps();

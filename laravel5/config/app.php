@@ -157,6 +157,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         'Mmanos\Search\SearchServiceProvider',
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
@@ -204,6 +205,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Search' => 'Mmanos\Search\Facade',
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 

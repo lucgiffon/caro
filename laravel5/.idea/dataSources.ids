@@ -1,360 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="MySQL - annales@localhost" uuid="4800e581-d2ce-4aa7-acc5-d1e89befea7f">
-    <database-info product="MySQL" version="5.5.5-10.1.9-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+    <database-info product="MySQL" version="5.6.26" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
-    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
-      <schema id="1" name="annales"/>
-      <table id="2" parent="1" name="annales"/>
-      <table id="3" parent="1" name="annales_fichiers"/>
-      <table id="4" parent="1" name="facultes"/>
-      <table id="5" parent="1" name="fichiers"/>
-      <table id="6" parent="1" name="matieres"/>
-      <table id="7" parent="1" name="migrations"/>
-      <table id="8" parent="1" name="niveaux"/>
-      <table id="9" parent="1" name="password_resets"/>
-      <table id="10" parent="1" name="professeur_annale"/>
-      <table id="11" parent="1" name="professeurs"/>
-      <table id="12" parent="1" name="tags"/>
-      <table id="13" parent="1" name="tags_annales"/>
-      <table id="14" parent="1" name="users"/>
-      <table id="15" parent="1" name="cursus"/>
-      <column id="16" parent="2" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="17" parent="2" name="id_matiere">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="18" parent="2" name="id_faculte">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="19" parent="2" name="id_niveau">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="20" parent="2" name="id_cursus">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="21" parent="2" name="annee">
-        <mandatory>1</mandatory>
-        <data-type>date</data-type>
-      </column>
-      <column id="22" parent="2" name="path">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="23" parent="2" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="24" parent="2" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <key id="25" parent="2" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="26" parent="3" name="annale_id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="27" parent="3" name="fichier_id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="28" parent="3" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="29" parent="3" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <index id="30" parent="3" name="annales_fichiers_annale_id_foreign">
-        <columns>annale_id</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <index id="31" parent="3" name="annales_fichiers_fichier_id_foreign">
-        <columns>fichier_id</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <foreign-key id="32" parent="3" name="annales_fichiers_annale_id_foreign">
-        <columns>annale_id</columns>
-        <ref-key>~.annales.PRIMARY</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <foreign-key id="33" parent="3" name="annales_fichiers_fichier_id_foreign">
-        <columns>fichier_id</columns>
-        <ref-key>~.fichiers.PRIMARY</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <column id="34" parent="4" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="35" parent="4" name="name">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="36" parent="4" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="37" parent="4" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <key id="38" parent="4" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="39" parent="5" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="40" parent="5" name="path">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="41" parent="5" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="42" parent="5" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <key id="43" parent="5" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="44" parent="6" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="45" parent="6" name="name">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="46" parent="6" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="47" parent="6" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <key id="48" parent="6" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="49" parent="7" name="migration">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="50" parent="7" name="batch">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="51" parent="8" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="52" parent="8" name="name">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="53" parent="8" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="54" parent="8" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <key id="55" parent="8" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="56" parent="9" name="email">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="57" parent="9" name="token">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="58" parent="9" name="created_at">
-        <mandatory>1</mandatory>
-        <data-type>timestamp</data-type>
-        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
-      </column>
-      <index id="59" parent="9" name="password_resets_email_index">
-        <columns>email</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <index id="60" parent="9" name="password_resets_token_index">
-        <columns>token</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <column id="61" parent="10" name="professeur_id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="62" parent="10" name="annale_id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="63" parent="10" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="64" parent="10" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <index id="65" parent="10" name="professeur_annale_annale_id_foreign">
-        <columns>annale_id</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <index id="66" parent="10" name="professeur_annale_professeur_id_foreign">
-        <columns>professeur_id</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <foreign-key id="67" parent="10" name="professeur_annale_annale_id_foreign">
-        <columns>annale_id</columns>
-        <ref-key>~.annales.PRIMARY</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <foreign-key id="68" parent="10" name="professeur_annale_professeur_id_foreign">
-        <columns>professeur_id</columns>
-        <ref-key>~.professeurs.PRIMARY</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <column id="69" parent="11" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="70" parent="11" name="name">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="71" parent="11" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="72" parent="11" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <key id="73" parent="11" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="74" parent="12" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="75" parent="12" name="name">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="76" parent="12" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="77" parent="12" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <key id="78" parent="12" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="79" parent="13" name="tag_id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="80" parent="13" name="annale_id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="81" parent="13" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="82" parent="13" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <index id="83" parent="13" name="tags_annales_annale_id_foreign">
-        <columns>annale_id</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <index id="84" parent="13" name="tags_annales_tag_id_foreign">
-        <columns>tag_id</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <foreign-key id="85" parent="13" name="tags_annales_annale_id_foreign">
-        <columns>annale_id</columns>
-        <ref-key>~.annales.PRIMARY</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <foreign-key id="86" parent="13" name="tags_annales_tag_id_foreign">
-        <columns>tag_id</columns>
-        <ref-key>~.tags.PRIMARY</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <column id="87" parent="14" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="88" parent="14" name="name">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="89" parent="14" name="email">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="90" parent="14" name="password">
-        <mandatory>1</mandatory>
-        <data-type>varchar(60)</data-type>
-      </column>
-      <column id="91" parent="14" name="remember_token">
-        <data-type>varchar(100)</data-type>
-      </column>
-      <column id="92" parent="14" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="93" parent="14" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <index id="94" parent="14" name="users_email_unique">
-        <columns>email</columns>
-        <desc-columns></desc-columns>
-        <unique>1</unique>
-      </index>
-      <key id="95" parent="14" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <key id="96" parent="14" name="users_email_unique">
-        <columns>email</columns>
-        <underlying-index>users_email_unique</underlying-index>
-      </key>
-      <column id="97" parent="15" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="98" parent="15" name="name">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="99" parent="15" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="100" parent="15" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <key id="101" parent="15" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-    </database-model>
+    <schema name="" catalog="annales"/>
+    <table name="annale_faculte" schema="" catalog="annales" type="TABLE">
+      <column name="annale_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="faculte_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <foreign-key name="annale_faculte_annale_id_foreign" columns="annale_id" ref-table="annales" ref-schema="" ref-catalog="annales" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="annale_faculte_faculte_id_foreign" columns="faculte_id" ref-table="facultes" ref-schema="" ref-catalog="annales" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="annale_faculte_annale_id_foreign" unique="false" columns="annale_id"/>
+      <index name="annale_faculte_faculte_id_foreign" unique="false" columns="faculte_id"/>
+    </table>
+    <table name="annale_fichier" schema="" catalog="annales" type="TABLE">
+      <column name="annale_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="fichier_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <foreign-key name="annale_fichier_annale_id_foreign" columns="annale_id" ref-table="annales" ref-schema="" ref-catalog="annales" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="annale_fichier_fichier_id_foreign" columns="fichier_id" ref-table="fichiers" ref-schema="" ref-catalog="annales" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="annale_fichier_annale_id_foreign" unique="false" columns="annale_id"/>
+      <index name="annale_fichier_fichier_id_foreign" unique="false" columns="fichier_id"/>
+    </table>
+    <table name="annale_professeur" schema="" catalog="annales" type="TABLE">
+      <column name="professeur_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="annale_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <foreign-key name="annale_professeur_annale_id_foreign" columns="annale_id" ref-table="annales" ref-schema="" ref-catalog="annales" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="annale_professeur_professeur_id_foreign" columns="professeur_id" ref-table="professeurs" ref-schema="" ref-catalog="annales" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="annale_professeur_annale_id_foreign" unique="false" columns="annale_id"/>
+      <index name="annale_professeur_professeur_id_foreign" unique="false" columns="professeur_id"/>
+    </table>
+    <table name="annale_tag" schema="" catalog="annales" type="TABLE">
+      <column name="tag_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="annale_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <foreign-key name="annale_tag_annale_id_foreign" columns="annale_id" ref-table="annales" ref-schema="" ref-catalog="annales" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="annale_tag_tag_id_foreign" columns="tag_id" ref-table="tags" ref-schema="" ref-catalog="annales" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="annale_tag_annale_id_foreign" unique="false" columns="annale_id"/>
+      <index name="annale_tag_tag_id_foreign" unique="false" columns="tag_id"/>
+    </table>
+    <table name="annales" schema="" catalog="annales" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="matiere_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="niveau_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="cursus_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="annee" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="path" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="annale_faculte_annale_id_foreign" table="annale_faculte" schema="" catalog="annales" columns="annale_id"/>
+      <exported-key name="annale_fichier_annale_id_foreign" table="annale_fichier" schema="" catalog="annales" columns="annale_id"/>
+      <exported-key name="annale_professeur_annale_id_foreign" table="annale_professeur" schema="" catalog="annales" columns="annale_id"/>
+      <exported-key name="annale_tag_annale_id_foreign" table="annale_tag" schema="" catalog="annales" columns="annale_id"/>
+    </table>
+    <table name="cursus" schema="" catalog="annales" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="facultes" schema="" catalog="annales" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="annale_faculte_faculte_id_foreign" table="annale_faculte" schema="" catalog="annales" columns="faculte_id"/>
+    </table>
+    <table name="fichiers" schema="" catalog="annales" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="path" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="annale_fichier_fichier_id_foreign" table="annale_fichier" schema="" catalog="annales" columns="fichier_id"/>
+    </table>
+    <table name="matieres" schema="" catalog="annales" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="migrations" schema="" catalog="annales" type="TABLE">
+      <column name="migration" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="batch" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+    </table>
+    <table name="niveaux" schema="" catalog="annales" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="password_resets" schema="" catalog="annales" type="TABLE">
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="token" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <index name="password_resets_email_index" unique="false" columns="email"/>
+      <index name="password_resets_token_index" unique="false" columns="token"/>
+    </table>
+    <table name="professeurs" schema="" catalog="annales" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="annale_professeur_professeur_id_foreign" table="annale_professeur" schema="" catalog="annales" columns="professeur_id"/>
+    </table>
+    <table name="tags" schema="" catalog="annales" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="annale_tag_tag_id_foreign" table="annale_tag" schema="" catalog="annales" columns="tag_id"/>
+    </table>
+    <table name="users" schema="" catalog="annales" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12"/>
+      <column name="remember_token" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="users_email_unique" unique="true" columns="email"/>
+    </table>
   </data-source>
 </component>
