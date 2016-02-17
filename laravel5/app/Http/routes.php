@@ -13,3 +13,6 @@
 
 Route::get('/', 'SearchEngineController@home');
 Route::post('/', 'SearchEngineController@postForm');
+
+Route::get('/submit', 'SubmissionController@home');
+Route::post('/submit', 'SubmissionController@postForm');

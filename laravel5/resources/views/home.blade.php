@@ -57,6 +57,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right main-nav">
 				<li><a href="#search">Recherche</a></li>
+				<li><a href="submit">Soumettre</a></li>
 				<li><a href="#services">Services</a></li>
 				<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Inscription</a></li>
 			</ul>

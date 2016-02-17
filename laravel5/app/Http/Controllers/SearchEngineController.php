@@ -19,14 +19,9 @@ class SearchEngineController extends Controller
     public function postForm(Request $request) {
         $query = $request->input('q');
 
-/*        \Search::insert(1, array(
-            'title' => 'My title',
-            'content' => 'The quick brown fox...',
-            'status' => 'published',
-        ));*/
+
         $elasticsearch_results = \Search::search('id_cursus', $query)->get();
 
-        $annale_id = array();
         $annale_matiere = array();
         $annale_cursus = array();
         $annale_annee = array();
@@ -39,10 +34,10 @@ class SearchEngineController extends Controller
             $annale_niveau[] = $annale->niveau->name;
         }
 
-        $r = array($elasticsearch_results, $annale_matiere, $annale_cursus, $annale_annee, $annale_niveau);
-//        $annales = Annale::find(1)->niveau;
-
-        return response()->view('debug', ["r" => $r]);
+        return response()->view('debug', ["matiere" => $annale_matiere,
+            "cursus" => $annale_cursus,
+            "annee" => $annale_annee,
+            "niveau" => $annale_niveau]);
 
 
 

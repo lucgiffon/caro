@@ -1,8 +1,6 @@
 <?php
 
-foreach ($r as $c) {
-    echo "<br><br><br><br>";
-    print_r($c);
-}
+echo $r;
+//print_r($r);
 echo "<br><br><a href=\"index.php\">Home page</a>";
 ?>
