@@ -69,12 +69,13 @@
 	<div class="container">
 		<div class="table">
 			<div class="header-text">
+				<form action="" method="post">
 				<div class="row">
 					<div class="col-md-12 text-center" id="content">
 						<h1 class="white typed">Le seul endroit pour toutes vos annales.</h1>
 						<span class="typed-cursor">|</span>
 						<div class="input-group stylish-input-group">
-							<input id="searchBox" type="text" class="form-control" placeholder="Rechercher">
+							<input id="searchBox" type="text" class="form-control" placeholder="Rechercher" name="q">
 								<span class="input-group-addon">
 									<button type="submit">
 										<i class="fa fa-search"></i>
@@ -84,9 +85,9 @@
 					</div>
 				</div>
 				<div class="row" id="searchCheckbox">
-					<div class="col-md-12">
+					{{--<div class="col-md-12">
 						<span class="text-left">Rechercher par :</span>
-					</div>
+					</div>--}}
 					<div class="col-md-3">
 						<div class="checkbox-holder text-left">
 							<div class="checkbox">
@@ -120,6 +121,7 @@
 						</div>
 					</div>
 				</div>
+				</form>
 			</div>
 		</div>
 	</div>
