@@ -7,8 +7,9 @@ jQuery(function($) {
 				if(!$(this).val())
 				{
 					$('#content').show();
-					$(".input-group.stylish-input-group").appendTo('#content');
-					$("#searchCheckbox").appendTo('#content');
+					$("#searchBoxForm").appendTo('#searchBoxBackHere');
+					$("#hidden-toggled").show();
+					//$("#searchCheckbox").appendTo('#content');
 					$(this).focus().removeClass("toggled");
 				}
 			}
@@ -16,10 +17,10 @@ jQuery(function($) {
 			{			
 				if($(this).val())
 				{
-					$(".input-group.stylish-input-group").appendTo('#searchBoxGoesHere');
-					$("#searchCheckbox").appendTo('#searchBoxGoesHere');
+					$("#searchBoxForm").appendTo('#searchBoxGoesHere');
+					//$("#searchCheckbox").appendTo('#searchBoxGoesHere');
+					$("#hidden-toggled").hide();
 					$(this).focus().addClass("toggled");
-					$('#content').hide();
 				}
 			}
 		});
