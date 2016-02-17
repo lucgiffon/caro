@@ -15,12 +15,12 @@ class SearchEngineController extends Controller
         return response()->view('home');
     }
 
-    public function postForm(Request $request) {/*
+    public function postForm(Request $request) {
         \Search::insert(1, array(
             'title' => 'My title',
             'content' => 'The quick brown fox...',
             'status' => 'published',
-        ));*/
+        ));
         return response()->view('home', ["response" => $request->input('q')]);
     }
 }
