@@ -6,9 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>AnnaleSearch - le seul endroit pour toute vos annales</title>
-	<meta name="description" content="Cardio is a free one page template made exclusively for Codrops by Luka Cvetinovic" />
-	<meta name="keywords" content="html template, css, free, one page, gym, fitness, web design" />
-	<meta name="author" content="Luka Cvetinovic for Codrops" />
+	<meta name="description" content="AnnaleSearch est un site de recherche d'annales" />
+		<meta name="keywords" content="annale faculté" />
+	<meta name="author" content="Giffon Luc" />
+	<meta name="csrf-token" content="{{ csrf_token() }}"/>
 	<!-- Favicons (created with http://realfavicongenerator.net/)-->
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
@@ -94,7 +95,7 @@
 						<div class="col-md-3">
 							<div class="checkbox-holder text-left">
 								<div class="checkbox">
-									<input type="checkbox" value="None" name="check" id="cursus"/>
+									<input type="checkbox" value="None" name="check" id="cursus" checked/>
 									<label for="cursus"><span>cursus</span></label>
 								</div>
 							</div>
@@ -102,7 +103,7 @@
 						<div class="col-md-3">
 							<div class="checkbox-holder text-left">
 								<div class="checkbox">
-									<input type="checkbox" value="None" name="check" id="niveau"/>
+									<input type="checkbox" value="None" name="check" id="niveau" checked/>
 									<label for="niveau"><span>niveau</span></label>
 								</div>
 							</div>
@@ -110,7 +111,7 @@
 						<div class="col-md-3">
 							<div class="checkbox-holder text-left">
 								<div class="checkbox">
-									<input type="checkbox" value="None" name="check" id="faculte"/>
+									<input type="checkbox" value="None" name="check" id="faculte" checked/>
 									<label for="faculte"><span>faculte</span></label>
 								</div>
 							</div>
@@ -118,7 +119,7 @@
 						<div class="col-md-3">
 							<div class="checkbox-holder text-left">
 								<div class="checkbox">
-									<input type="checkbox" value="None" name="check" id="matiere"/>
+									<input type="checkbox" value="None" name="check" id="matiere" checked/>
 									<label for="matiere"><span>matiere</span></label>
 								</div>
 							</div>

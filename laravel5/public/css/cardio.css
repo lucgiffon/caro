@@ -1055,6 +1055,12 @@ footer .social-footer li:hover a {
 
 /* Media Queries */
 
+@media(min-width: 768px) {
+	.navbar-nav > li {
+		margin-left: 0px;
+	}
+}
+
 @media(max-width:991px) {
 	.text-center-mobile {
 		text-align: center !important;
@@ -1127,4 +1133,3 @@ footer .social-footer li:hover a {
 #searchCheckbox {
 	margin-top: 20px;
 }
-

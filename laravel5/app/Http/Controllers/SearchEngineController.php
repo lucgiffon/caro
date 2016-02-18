@@ -20,27 +20,22 @@ class SearchEngineController extends Controller
     public function postForm(Request $request) {
         $query = $request->input('q');
 
+        $annales[1]["cursus"];
+        $elastic_results = \Search::search('id_cursus', $query)->get();
 
-        $elasticsearch_results = \Search::search('tags', $query, array('fuzzy' => true))->get();
+        $annales = [];
 
-        $annale_matiere = array();
-        $annale_cursus = array();
-        $annale_annee = array();
-        $annale_niveau = array();
-        foreach ($elasticsearch_results as $elastic_result) {
+        foreach ($elastic_results as $elastic_result) {
             $annale = Annale::find($elastic_result['id']);
-            $annale_matiere[] = $annale->matiere->name;
-            $annale_cursus[] = $annale->cursus->name;
-            $annale_annee[] = $annale->annee;
-            $annale_niveau[] = $annale->niveau->name;
+            $annales["matiere"] = $annale->matiere->name;
+            $annales["cursus"] = $annale->cursus->name;
+            $annales["annee"] = $annale->annee;
+            $annales["niveau"] = $annale->niveau->name;
         }
 
-        return response()->view('home', ["matiere" => $annale_matiere,
-            "cursus" => $annale_cursus,
-            "annee" => $annale_annee,
-            "niveau" => $annale_niveau]);
+        return response()->view('debug', ["annales" => $annales]);
 
 
 
-    }
+    ;}
 }

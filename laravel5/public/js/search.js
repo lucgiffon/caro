@@ -2,8 +2,23 @@ jQuery(function($) {
 	// Window Load
 	$(window).load(function() {
 		$('#searchBox').keyup(function() {
-			if($(this).hasClass('toggled'))
-			{				
+            window.scrollTo(0, 0);
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: '',
+                type: "post",
+                data: {'q': $('input[name=q]').val()},
+                success: function(data){
+                    alert(data);
+                }
+            });
+
+            if($(this).hasClass('toggled'))
+			{
 				if(!$(this).val())
 				{
 					$('#content').show();
