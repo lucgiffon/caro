@@ -27,10 +27,12 @@ class SubmissionController extends Controller
 
     public function postForm(PostAnnaleRequest $request) {
 
+
+        $annee = $request->input('annee');
+
         $matiere = $request->input('matiere');
         $niveau = $request->input('niveau');
         $cursus = $request->input('cursus');
-        $annee = $request->input('annee');
         $professeurs = $request->input('prof');
         $facultes = $request->input('faculte');
         $tags = $request->input('tag');
@@ -45,11 +47,16 @@ class SubmissionController extends Controller
             'tags' => $tags,
         ));
 
-        Matiere::firstOrCreate(['name' => $matiere]);
-        Niveau::firstOrCreate(['name' => $niveau]);
-        Cursus::firstOrCreate(['name' => $cursus]);
-        Professeur::firstOrCreate(['name' => $professeurs]);
-        Faculte::firstOrCreate(['name' => $facultes]);
+        $id_matiere = Matiere::firstOrCreate(['name' => $matiere])->id;
+        $id_niveau = Niveau::firstOrCreate(['name' => $niveau])->id;
+        $id_cursus = Cursus::firstOrCreate(['name' => $cursus])->id;
+
+        Annale::create(['matiere_id' => $id_matiere,
+            'niveau_id' => $id_niveau,
+            'cursus_id' => $id_cursus,
+            'annee' => date('Y/m/d', strtotime("1-1-" . $annee))]);
+
+        $r = date('Y/m/d', strtotime("1-1-" . $annee));
 
         return response()->view('debug', ["r" => $r]);
     }

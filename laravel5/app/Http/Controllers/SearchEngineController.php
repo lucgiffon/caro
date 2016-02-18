@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cursus;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -20,7 +21,7 @@ class SearchEngineController extends Controller
         $query = $request->input('q');
 
 
-        $elasticsearch_results = \Search::search('id_cursus', $query)->get();
+        $elasticsearch_results = \Search::search('tags', $query, array('fuzzy' => true))->get();
 
         $annale_matiere = array();
         $annale_cursus = array();
@@ -34,13 +35,12 @@ class SearchEngineController extends Controller
             $annale_niveau[] = $annale->niveau->name;
         }
 
-        return response()->view('debug', ["matiere" => $annale_matiere,
+        return response()->view('home', ["matiere" => $annale_matiere,
             "cursus" => $annale_cursus,
             "annee" => $annale_annee,
             "niveau" => $annale_niveau]);
 
 
 
-        return response()->view('home', ["response" => $request->input('q')]);
     }
 }

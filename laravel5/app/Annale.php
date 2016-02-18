@@ -9,6 +9,8 @@ class Annale extends Model
 
     protected $table = "annales";
 
+    protected $fillable = ['matiere_id', 'niveau_id', 'cursus_id', 'annee'];
+
     public function niveau() {
         return $this->belongsTo('App\Niveau');
     }

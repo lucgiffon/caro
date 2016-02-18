@@ -32,7 +32,6 @@ class AnnalesTableSeeder extends Seeder
                 'niveau_id' => $id_niveau,
                 'cursus_id' => $id_cursus,
                 'annee' => Carbon::createFromDate(rand(2009, 2015)),
-                'path' => "path" . $i
             ]);
         }
     }

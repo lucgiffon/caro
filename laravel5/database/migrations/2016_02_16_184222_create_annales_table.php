@@ -18,7 +18,6 @@ class CreateAnnalesTable extends Migration
             $table->integer('niveau_id');
             $table->integer('cursus_id');
             $table->date('annee');
-            $table->string('path');
             $table->timestamps();
         });
     }
