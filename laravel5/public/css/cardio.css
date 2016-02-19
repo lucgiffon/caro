@@ -1133,3 +1133,7 @@ footer .social-footer li:hover a {
 #searchCheckbox {
 	margin-top: 20px;
 }
+
+#table_here {
+	color: black;
+}

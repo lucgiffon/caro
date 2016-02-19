@@ -126,6 +126,12 @@
 						</div>
 					</div>
 				</form>
+				<div class="row">
+					<div class="col-md-12 text-center" id="content">
+						<div id="table_here">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
